@@ -178,8 +178,7 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 .hero-photo {
   width: 100%; height: 100%;
   object-fit: cover;
-  background: linear-gradient(135deg, #99d6d6 0%, #66BFBF 30%, #B3E8E8 60%, #CCF0F0 100%);
-  display: flex; align-items: center; justify-content: center;
+  display: block;
 }
 /* Realistic dental chair scene using CSS */
 .dental-scene {
@@ -880,48 +879,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
   <div class="hero-right">
     <!-- Simulated dental clinic photo with CSS art -->
     <div class="hero-img-area" style="position:relative; overflow:hidden;">
-      <!-- Gradient background simulating the photo -->
-      <div style="
-        position:absolute; inset:0;
-        background: linear-gradient(145deg,
-          #c9cfe8 0%,
-          #b8c0e0 15%,
-          #d4d8ef 30%,
-          #e8eaf5 50%,
-          #f0eef8 70%,
-          #faf9ff 100%);
-      "></div>
-      <!-- Decorative shapes simulating dental equipment -->
-      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:.6;">
-        <svg width="70%" height="70%" viewBox="0 0 400 500" fill="none" aria-hidden="true">
-          <!-- Dental chair silhouette -->
-          <rect x="60" y="220" width="280" height="140" rx="20" fill="rgba(26,126,126,0.08)"/>
-          <rect x="80" y="180" width="220" height="60" rx="16" fill="rgba(26,126,126,0.1)"/>
-          <rect x="90" y="360" width="30" height="120" rx="10" fill="rgba(26,126,126,0.12)"/>
-          <rect x="280" y="360" width="30" height="120" rx="10" fill="rgba(26,126,126,0.12)"/>
-          <!-- Overhead lamp arm -->
-          <path d="M340 60 L340 160 L260 200" stroke="rgba(26,126,126,0.2)" stroke-width="12" stroke-linecap="round"/>
-          <circle cx="245" cy="208" r="28" fill="rgba(26,126,126,0.12)" stroke="rgba(26,126,126,0.15)" stroke-width="4"/>
-          <!-- Equipment console -->
-          <rect x="30" y="100" width="60" height="220" rx="12" fill="rgba(26,126,126,0.07)"/>
-          <rect x="38" y="115" width="44" height="30" rx="6" fill="rgba(26,126,126,0.1)"/>
-          <rect x="38" y="155" width="44" height="30" rx="6" fill="rgba(26,126,126,0.08)"/>
-          <!-- Dental tools hanging -->
-          <line x1="50" y1="200" x2="50" y2="280" stroke="rgba(26,126,126,0.15)" stroke-width="3"/>
-          <line x1="64" y1="210" x2="64" y2="290" stroke="rgba(26,126,126,0.12)" stroke-width="3"/>
-          <line x1="78" y1="205" x2="78" y2="285" stroke="rgba(26,126,126,0.10)" stroke-width="3"/>
-          <circle cx="50" cy="285" r="6" fill="rgba(26,126,126,0.2)"/>
-          <circle cx="64" cy="295" r="6" fill="rgba(26,126,126,0.15)"/>
-          <circle cx="78" cy="290" r="6" fill="rgba(26,126,126,0.12)"/>
-          <!-- Monitor -->
-          <rect x="310" y="80" width="80" height="60" rx="8" fill="rgba(26,126,126,0.08)" stroke="rgba(26,126,126,0.12)" stroke-width="2"/>
-          <rect x="316" y="86" width="68" height="48" rx="4" fill="rgba(26,126,126,0.05)"/>
-          <!-- Chair headrest -->
-          <ellipse cx="190" cy="172" rx="50" ry="22" fill="rgba(26,126,126,0.12)"/>
-        </svg>
-      </div>
-      <!-- Soft vignette overlay -->
-      <div style="position:absolute; left:0; top:0; bottom:0; width:120px; background:linear-gradient(to right, rgba(255,255,255,0.6), transparent);"></div>
+      <img src="immagini/image 3.jpg" alt="Studio Dentistico Piscopo" class="hero-photo"/>
+      <!-- Soft vignette overlay on the left edge -->
+      <div style="position:absolute; left:0; top:0; bottom:0; width:80px; background:linear-gradient(to right, rgba(255,255,255,0.5), transparent); pointer-events:none;"></div>
     </div>
   </div>
 </section>
