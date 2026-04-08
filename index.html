@@ -129,7 +129,7 @@ nav {
 }
 nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 800; color: var(--dark); }
+.nav-logo { display: flex; align-items: center; }
 .nav-logo-icon { width: 36px; height: 36px; }
 .nav-logo-icon svg { width: 36px; height: 36px; }
 .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
@@ -682,38 +682,23 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
   <div class="container">
     <div class="nav-inner">
       <!-- Logo -->
-      <a href="#" class="nav-logo" aria-label="Dentalic Home">
-        <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="10" fill="#E0F5F5"/>
-          <path d="M20 7C16.5 7 13 9.5 13 13.5c0 3 .6 4.8.6 7.8 0 2.4.6 7.8 3.6 7.8.96 0 1.8-.84 2.4-2.4.6 1.56 1.44 2.4 2.4 2.4 3 0 3.6-5.4 3.6-7.8 0-3 .6-4.8.6-7.8C27 9.5 23.5 7 20 7z" stroke="#1A7E7E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16 16c2-1.5 6-1.5 8 0" stroke="#1A7E7E" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        Dentalic
+      <a href="#" class="nav-logo" aria-label="Studio Dentistico Piscopo Home">
+        <img src="immagini/logo marco piscopo.png" alt="Studio Dentistico Piscopo" style="height:48px;width:auto;display:block;"/>
       </a>
 
       <!-- Links -->
       <ul class="nav-links" role="list">
         <li><a href="#" class="active">Home</a></li>
-        <li>
-          <span class="has-dd">Pages
-            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-        </li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li>
-          <a href="#contact" class="nav-cart">
-            Cart
-            <span class="cart-badge" aria-label="0 items in cart">0</span>
-          </a>
-        </li>
+        <li><a href="#contact">Contatti</a></li>
       </ul>
 
       <!-- Right -->
       <div class="nav-right">
-        <a href="tel:+11478707040" class="nav-phone">
+        <a href="tel:+390817571820" class="nav-phone">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          (147) 870 – 7040
+          081 757 1820
         </a>
         <a href="#contact" class="btn btn-primary">Book Now</a>
       </div>
