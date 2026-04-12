@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ortodonzia a Napoli | Apparecchi e Allineatori Trasparenti | Studio Piscopo</title>
+  <meta name="description" content="Ortodonzia a Napoli per adulti e bambini: apparecchi fissi, allineatori trasparenti e ortodonzia intercettiva. Studio Dentistico Dott. Marco Piscopo, Traversa Via Michelangelo 31."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+:root {
+  --purple: #1A7E7E; --purple-2: #2A9898; --purple-l: #E0F5F5;
+  --purple-ll: #F0FAFA; --purple-d: #0F6666;
+  --dark: #0D2B2B; --dark-2: #1A4040; --body: #4A6B6B;
+  --border: #C8E8E8; --white: #FFFFFF;
+  --bg: #FAFEFE; --bg-2: #F0FAFA;
+  --shadow-sm: 0 2px 12px rgba(26,126,126,0.08);
+  --shadow: 0 4px 24px rgba(26,126,126,0.12);
+  --shadow-lg: 0 8px 40px rgba(26,126,126,0.16);
+  --r: 20px; --r-lg: 28px;
+  --font: 'Plus Jakarta Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--white); color: var(--dark); font-family: var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+/* ── NAV ─────────────────────────────────────────── */
+nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 18px 0; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; flex: 0 0 200px; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: 28px; list-style: none; flex: 1; }
+.nav-links a { font-size: .9rem; font-weight: 600; color: var(--body); transition: color .2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--purple); }
+.nav-right { display: flex; align-items: center; gap: 16px; flex: 0 0 200px; justify-content: flex-end; }
+.nav-phone { display: flex; align-items: center; }
+.nav-phone svg { width: 24px; height: 24px; fill: none; stroke: var(--purple); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .2s; }
+.nav-phone:hover svg { stroke: var(--dark); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 100px; font-family: var(--font); font-size: .9375rem; font-weight: 700; cursor: pointer; border: none; transition: all .25s; line-height: 1; white-space: nowrap; }
+.btn-primary { background: var(--purple); color: #fff; box-shadow: 0 4px 20px rgba(26,126,126,.35); }
+.btn-primary:hover { background: var(--purple-d); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,126,126,.45); }
+
+/* ── HERO ────────────────────────────────────────── */
+.srv-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--dark) 0%, #0a3d3d 50%, var(--purple-d) 100%);
+  padding: 56px 0 64px;
+  overflow: hidden;
+}
+.srv-hero::before {
+  content: '';
+  position: absolute; top: -120px; right: -80px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: rgba(26,126,126,.15);
+  pointer-events: none;
+}
+.srv-hero::after {
+  content: '';
+  position: absolute; bottom: -80px; left: 10%;
+  width: 250px; height: 250px; border-radius: 50%;
+  background: rgba(42,152,152,.1);
+  pointer-events: none;
+}
+
+.breadcrumb { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 32px; }
+.breadcrumb a { font-size: .8125rem; color: rgba(255,255,255,.5); transition: color .2s; }
+.breadcrumb a:hover { color: rgba(255,255,255,.8); }
+.breadcrumb span { font-size: .8125rem; color: rgba(255,255,255,.7); font-weight: 600; }
+.breadcrumb svg { width: 14px; height: 14px; stroke: rgba(255,255,255,.35); fill: none; stroke-width: 2.5; }
+
+.srv-hero-inner { text-align: center; max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+
+.srv-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 100px; font-size: .75rem; font-weight: 600; color: var(--purple-2); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 20px; backdrop-filter: blur(4px); }
+.srv-pill svg { width: 16px; height: 16px; stroke: var(--purple-2); fill: none; stroke-width: 2; }
+
+.srv-hero h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #fff; line-height: 1.12; margin-bottom: 20px; }
+.srv-hero-desc { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,.65); max-width: 580px; margin: 0 auto; }
+
+/* ── IMAGE CAROUSEL ──────────────────────────────── */
+.srv-gallery { padding: 72px 0; background: var(--bg); }
+.srv-gallery-title { text-align: center; font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 32px; }
+.gallery-wrap { position: relative; overflow: hidden; }
+.gallery-track {
+  display: flex; gap: 16px;
+  transition: transform .45s cubic-bezier(.4,0,.2,1);
+  cursor: grab; user-select: none;
+}
+.gallery-track.dragging { transition: none; cursor: grabbing; }
+.gallery-slide {
+  flex-shrink: 0;
+  width: calc(33.333% - 11px);
+  aspect-ratio: 16/10;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--purple-l), var(--border));
+}
+.gallery-slide img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s;
+}
+.gallery-slide:hover img { transform: scale(1.05); }
+.gallery-nav { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+.gallery-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--white); border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all .25s;
+}
+.gallery-btn:hover { background: var(--purple); border-color: var(--purple); }
+.gallery-btn:hover svg { stroke: #fff; }
+.gallery-btn svg { width: 18px; height: 18px; stroke: var(--dark); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.gallery-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+.gallery-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); border: none; cursor: pointer;
+  transition: all .3s; padding: 0;
+}
+.gallery-dot.active { background: var(--purple); width: 24px; border-radius: 4px; }
+
+@media (max-width: 1024px) {
+  .gallery-slide { width: calc(50% - 8px); }
+}
+@media (max-width: 768px) {
+  .gallery-slide { width: 85%; }
+}
+
+/* ── SIDEBAR FORM ────────────────────────────────── */
+.srv-sidebar { position: sticky; top: 100px; }
+.srv-form-card {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-lg);
+}
+.form-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.form-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--purple-l); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.form-icon svg { width: 22px; height: 22px; stroke: var(--purple); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.form-header-text h3 { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 2px; }
+.form-header-text p { font-size: .78rem; color: var(--body); line-height: 1.4; }
+
+.srv-form-card input {
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--border); border-radius: 14px;
+  font-family: var(--font); font-size: .875rem;
+  margin-bottom: 10px; transition: all .2s;
+  background: var(--bg); color: var(--dark);
+}
+.srv-form-card input:focus { outline: none; border-color: var(--purple); background: var(--white); box-shadow: 0 0 0 3px rgba(26,126,126,.1); }
+.srv-form-card input[readonly] { color: var(--purple); font-weight: 600; background: var(--purple-ll); border-color: var(--purple-l); }
+.srv-form-card .btn { width: 100%; justify-content: center; margin-top: 6px; padding: 15px 28px; }
+
+/* ── CONTENT SECTION ─────────────────────────────── */
+.srv-content { padding: 80px 0; }
+.srv-content-grid { display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start; }
+
+.srv-section-label { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: var(--purple-ll); border: 1px solid var(--border); border-radius: 100px; font-size: .75rem; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 20px; }
+.srv-content h2 { font-size: 1.6rem; font-weight: 800; color: var(--dark); margin-bottom: 20px; line-height: 1.25; }
+.srv-content p { font-size: .95rem; line-height: 1.85; color: var(--body); margin-bottom: 18px; }
+
+.srv-features { list-style: none; margin: 28px 0 32px; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.srv-features li {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all .2s;
+}
+.srv-features li:hover { background: var(--purple-ll); border-color: var(--purple-l); transform: translateX(4px); }
+.srv-features li .feat-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--purple-l); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.srv-features li .feat-icon svg { width: 18px; height: 18px; stroke: var(--purple); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.srv-features li span { font-size: .9rem; line-height: 1.65; color: var(--dark-2); }
+
+/* ── WHY US CARDS ────────────────────────────────── */
+.srv-why { padding: 0 0 80px; }
+.srv-why-title { text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 40px; color: var(--dark); }
+.srv-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.why-card {
+  text-align: center; padding: 32px 24px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg);
+  transition: all .3s;
+}
+.why-card:hover { background: var(--white); box-shadow: var(--shadow); transform: translateY(-4px); }
+.why-card-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  background: var(--purple-l); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.why-card-icon svg { width: 26px; height: 26px; stroke: var(--purple); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.why-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; color: var(--dark); }
+.why-card p { font-size: .82rem; line-height: 1.6; color: var(--body); }
+
+/* ── CTA ─────────────────────────────────────────── */
+.srv-cta {
+  margin: 0 32px 80px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-d));
+  border-radius: var(--r-lg);
+  padding: 48px 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px; position: relative; overflow: hidden;
+}
+.srv-cta::before {
+  content: ''; position: absolute; top: -60px; right: -40px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+.srv-cta-text h3 { font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+.srv-cta-text p { font-size: .9rem; color: rgba(255,255,255,.7); }
+.btn-white { background: #fff; color: var(--purple); font-weight: 700; }
+.btn-white:hover { background: var(--purple-ll); transform: translateY(-2px); }
+
+/* ── FOOTER ──────────────────────────────────────── */
+.srv-footer { background: var(--dark); padding: 40px 0; text-align: center; }
+.srv-footer p { color: rgba(255,255,255,.45); font-size: .8rem; }
+.srv-footer a { color: var(--purple-2); font-weight: 600; transition: color .2s; }
+.srv-footer a:hover { color: #fff; }
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .srv-hero-grid, .srv-content-grid { grid-template-columns: 1fr; gap: 40px; }
+  .srv-sidebar { position: static; max-width: 440px; }
+  .srv-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .srv-cta { flex-direction: column; text-align: center; padding: 40px 32px; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .srv-hero { padding: 40px 0 48px; }
+  .srv-content { padding: 56px 0; }
+  .srv-why-grid { grid-template-columns: 1fr; }
+  .srv-cta { margin: 0 16px 60px; }
+}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../immagini/logo marco piscopo.png" alt="Studio Dentistico Piscopo" style="height:48px;width:auto;display:block;"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#services" class="active">Servizi</a></li>
+        <li><a href="../index.html#contact">Contatti</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+390817571820" class="nav-phone" aria-label="Chiama 081 757 1820">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <a href="../index.html#contact" class="btn btn-primary">Prenota</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="srv-hero">
+  <div class="container">
+    <div class="srv-hero-inner">
+      <div class="srv-pill">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Ortodonzia
+      </div>
+      <h1>Denti dritti per un sorriso<br>davvero <em style="font-style:normal;color:var(--purple-2)">perfetto</em></h1>
+      <p class="srv-hero-desc">Lo Studio Dentistico del Dott. Marco Piscopo a Napoli offre trattamenti ortodontici personalizzati per adulti e bambini, con apparecchi tradizionali e allineatori trasparenti di ultima generazione per risultati eccellenti e discreti.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT + SIDEBAR -->
+<section class="srv-content">
+  <div class="container">
+    <div class="srv-content-grid">
+      <div>
+        <div class="srv-section-label">Informazioni</div>
+        <h2>Cos'è l'ortodonzia e come può trasformare il tuo sorriso</h2>
+        <p>L'ortodonzia è la branca dell'odontoiatria che si occupa della diagnosi, prevenzione e correzione delle malocclusioni e del disallineamento dentale. Presso il nostro studio a Napoli, in Traversa Via Michelangelo 31, ogni trattamento ortodontico viene pianificato con scansioni digitali 3D e studio cefalometrico per garantire risultati precisi e predicibili.</p>
+
+        <ul class="srv-features">
+          <li>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+            <span><strong>Apparecchi fissi</strong> — bracket metallici o estetici in ceramica per il riallineamento completo dell'arcata dentale, ideali per malocclusioni complesse</span>
+          </li>
+          <li>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <span><strong>Allineatori trasparenti</strong> — mascherine rimovibili quasi invisibili che correggono il sorriso senza compromettere l'estetica durante il trattamento</span>
+          </li>
+          <li>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <span><strong>Ortodonzia intercettiva</strong> — intervento precoce nei bambini per guidare la crescita ossea e prevenire malocclusioni in fase di sviluppo</span>
+          </li>
+          <li>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+            <span><strong>Apparecchi funzionali</strong> — dispositivi rimovibili che correggono i rapporti scheletrici tra mascella e mandibola durante la crescita</span>
+          </li>
+          <li>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <span><strong>Contenzione e mantenimento</strong> — retainer fissi e mobili per preservare i risultati ottenuti e garantire stabilità a lungo termine</span>
+          </li>
+        </ul>
+
+        <p>Il Dott. Marco Piscopo e il suo team seguono ogni paziente con un approccio personalizzato, dalla prima visita ortodontica fino alla fase di contenzione. Grazie alla pianificazione digitale e a controlli periodici costanti, il trattamento procede in modo efficiente e confortevole, riducendo al minimo i disagi.</p>
+
+        <p>Se cerchi un ortodontista a Napoli o un centro specializzato in ortodonzia in Campania, il nostro studio rappresenta il punto di riferimento per trattamenti ortodontici moderni, con soluzioni estetiche e funzionali adatte a ogni età e ogni esigenza.</p>
+      </div>
+
+      <!-- Sticky sidebar (rivisible on scroll) -->
+      <div class="srv-sidebar" aria-hidden="true">
+        <div class="srv-form-card">
+          <div class="form-header">
+            <div class="form-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div class="form-header-text">
+              <h3>Consulenza gratuita</h3>
+              <p>Ti ricontatteremo entro 24h</p>
+            </div>
+          </div>
+          <form action="#" method="post" novalidate>
+            <input type="text" placeholder="Nome e Cognome" required/>
+            <input type="email" placeholder="Indirizzo Email" required/>
+            <input type="tel" placeholder="Numero di Telefono" required/>
+            <input type="text" value="Ortodonzia" readonly/>
+            <button type="submit" class="btn btn-primary">Richiedi Consulenza</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section class="srv-gallery">
+  <div class="container">
+    <h2 class="srv-gallery-title">Il nostro studio</h2>
+    <div class="gallery-wrap">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=640&q=80" alt="Studio dentistico moderno"/></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=640&q=80" alt="Attrezzatura odontoiatrica"/></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=640&q=80" alt="Visita dentistica"/></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=640&q=80" alt="Sala operatoria dentale"/></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=640&q=80" alt="Strumenti chirurgici"/></div>
+        <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=640&q=80" alt="Paziente soddisfatto"/></div>
+      </div>
+      <div class="gallery-nav">
+        <button class="gallery-btn" id="galPrev" aria-label="Precedente">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery-btn" id="galNext" aria-label="Successivo">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="gallery-dots" id="galDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="srv-why">
+  <div class="container">
+    <h2 class="srv-why-title">Perché scegliere il nostro studio</h2>
+    <div class="srv-why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Per tutte le età</h3>
+        <p>Trattamenti ortodontici studiati per bambini, adolescenti e adulti, con approcci specifici per ogni fascia d'età.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Opzioni invisibili</h3>
+        <p>Allineatori trasparenti e bracket estetici in ceramica per sorridere liberamente durante tutto il percorso ortodontico.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Pianificazione digitale</h3>
+        <p>Scanner intraorali 3D e software di simulazione per visualizzare il risultato finale prima ancora di iniziare il trattamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="srv-cta">
+  <div class="srv-cta-text">
+    <h3>Hai bisogno di una consulenza?</h3>
+    <p>Prenota una prima visita senza impegno nel nostro studio a Napoli.</p>
+  </div>
+  <a href="../index.html#contact" class="btn btn-white">Prenota Appuntamento</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="srv-footer">
+  <div class="container">
+    <p>&copy; 2026 Studio Dentistico Dott. Marco Piscopo — Traversa Via Michelangelo 31, Napoli &nbsp;|&nbsp; <a href="../index.html">Torna alla Home</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var track = document.getElementById('galleryTrack');
+  var dotsWrap = document.getElementById('galDots');
+  if (!track) return;
+
+  var slides = track.querySelectorAll('.gallery-slide');
+  var n = slides.length;
+  var idx = 0, busy = false;
+  var GAP = 16;
+
+  function vis() { return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3; }
+  function slideW() {
+    var v = vis();
+    return (track.parentElement.offsetWidth - GAP * (v - 1)) / v;
+  }
+  function maxIdx() { return Math.max(0, n - vis()); }
+
+  function setWidths() {
+    var w = slideW();
+    for (var i = 0; i < n; i++) slides[i].style.width = w + 'px';
+  }
+
+  function goTo(i, animate) {
+    idx = Math.max(0, Math.min(i, maxIdx()));
+    if (animate === false) track.style.transition = 'none';
+    else track.style.transition = '';
+    track.style.transform = 'translate3d(' + (-(slideW() + GAP) * idx) + 'px,0,0)';
+    if (animate === false) track.getBoundingClientRect();
+    updateDots();
+  }
+
+  /* Dots */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    var total = maxIdx() + 1;
+    for (var i = 0; i < total; i++) {
+      var d = document.createElement('button');
+      d.className = 'gallery-dot' + (i === idx ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (i + 1));
+      d.dataset.i = i;
+      dotsWrap.appendChild(d);
+    }
+  }
+  function updateDots() {
+    var dots = dotsWrap.querySelectorAll('.gallery-dot');
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('active', i === idx);
+    }
+  }
+  dotsWrap.addEventListener('click', function(e) {
+    var t = e.target.closest('.gallery-dot');
+    if (t && !busy) goTo(parseInt(t.dataset.i));
+  });
+
+  /* Init */
+  function init() { setWidths(); buildDots(); goTo(idx, false); }
+  requestAnimationFrame(function(){ requestAnimationFrame(init); });
+  window.addEventListener('resize', init);
+
+  /* Buttons */
+  document.getElementById('galNext').addEventListener('click', function() {
+    if (!busy) goTo(idx >= maxIdx() ? 0 : idx + 1);
+  });
+  document.getElementById('galPrev').addEventListener('click', function() {
+    if (!busy) goTo(idx <= 0 ? maxIdx() : idx - 1);
+  });
+
+  /* Drag/Swipe */
+  var dx = null, ox = 0, THRESH = 50;
+  track.addEventListener('mousedown', function(e) { e.preventDefault(); dx = e.clientX; ox = -(slideW() + GAP) * idx; track.style.transition = 'none'; track.style.cursor = 'grabbing'; });
+  window.addEventListener('mousemove', function(e) { if (dx === null) return; track.style.transform = 'translate3d(' + (ox + e.clientX - dx) + 'px,0,0)'; });
+  window.addEventListener('mouseup', function(e) { if (dx === null) return; var d = e.clientX - dx; dx = null; track.style.cursor = ''; if (d < -THRESH) goTo(idx + 1); else if (d > THRESH) goTo(idx - 1); else goTo(idx); });
+  track.addEventListener('touchstart', function(e) { dx = e.touches[0].clientX; ox = -(slideW() + GAP) * idx; track.style.transition = 'none'; }, {passive:true});
+  track.addEventListener('touchmove', function(e) { if (dx === null) return; track.style.transform = 'translate3d(' + (ox + e.touches[0].clientX - dx) + 'px,0,0)'; }, {passive:true});
+  track.addEventListener('touchend', function(e) { if (dx === null) return; var d = e.changedTouches[0].clientX - dx; dx = null; if (d < -THRESH) goTo(idx + 1); else if (d > THRESH) goTo(idx - 1); else goTo(idx); });
+})();
+</script>
+</body>
+</html>
