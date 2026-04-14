@@ -149,45 +149,52 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 /*  HERO                                                  */
 /* ────────────────────────────────────────────────────── */
 #hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 73px;
   position: relative;
   overflow: hidden;
+  background: #0d2b2b; /* Fallback if video is slow to load */
+}
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 43, 43, 0.65);
+  z-index: 1;
 }
 .hero-left {
-  background: var(--white);
+  width: 100%;
+  max-width: 800px;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 60px 80px max(32px, calc((100vw - 1240px)/2 + 32px));
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-.hero-deco-1 { width: 320px; height: 320px; bottom: -80px; left: -80px; border-width: 40px; }
-.hero-deco-2 { width: 180px; height: 180px; top: 60px; right: -40px; border-width: 24px; }
-.hero-title { margin-bottom: 20px; }
-.hero-sub { max-width: 420px; margin-bottom: 36px; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-/* Hero right – photo */
-.hero-right {
-  position: relative;
-  overflow: hidden;
-}
-.hero-photo {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-/* Realistic dental chair scene using CSS */
-.dental-scene {
-  width: 100%; height: 100%;
-  background: linear-gradient(160deg, #d1d5db 0%, #e5e7eb 30%, #f3f4f6 60%, #ffffff 100%);
-  position: relative;
-  overflow: hidden;
-}
+.hero-deco-1, .hero-deco-2 { display: none; }
+.hero-title { margin-bottom: 24px; color: #ffffff; font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; }
+.hero-title .accent { color: var(--border); }
+.hero-sub { max-width: 600px; margin-bottom: 40px; color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; line-height: 1.7; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.hero-actions .btn-outline { color: #fff; border-color: rgba(255,255,255,0.4); backdrop-filter: blur(8px); }
+.hero-actions .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 .dental-scene::before {
   content: '';
   position: absolute;
@@ -232,8 +239,8 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 /*  INFO STRIP                                            */
 /* ────────────────────────────────────────────────────── */
 .info-strip {
-  background: var(--white);
-  padding: 0 0 80px;
+  background: var(--bg);
+  padding: 80px 0;
 }
 .info-grid {
   display: grid;
@@ -840,29 +847,19 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
      HERO
 ════════════════════════════════════════════ -->
 <section id="hero">
+  <video autoplay loop muted playsinline class="hero-video-bg">
+    <source src="immagini/video hero section.mp4" type="video/mp4" />
+  </video>
   <div class="hero-left">
-    <!-- Deco circles -->
-    <div class="deco-circle hero-deco-1" aria-hidden="true"></div>
-    <div class="deco-circle hero-deco-2" aria-hidden="true"></div>
-
     <h1 class="h1 hero-title">
-      A <span class="accent">dentistry clinic</span><br>you can trust
+      Una clinica dentale <br>di cui ti puoi <span class="accent">fidare</span>
     </h1>
     <p class="body-lg hero-sub">
-      We provide professional dental care with a gentle touch. Our experienced team is committed to helping you achieve and maintain a healthy, beautiful smile.
+      Studio Dentistico Piscopo: forniamo cure dentistiche professionali con tocco delicato ed innovativo. Unisciti ai nostri pazienti soddisfatti per ottenere un sorriso sano e luminoso.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Book an Appointment</a>
-      <a href="#services" class="btn btn-outline">Browse Services</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <!-- Simulated dental clinic photo with CSS art -->
-    <div class="hero-img-area" style="position:relative; overflow:hidden;">
-      <img src="immagini/image 3.jpg" alt="Studio Dentistico Piscopo" class="hero-photo"/>
-      <!-- Soft vignette overlay on the left edge -->
-      <div style="position:absolute; left:0; top:0; bottom:0; width:80px; background:linear-gradient(to right, rgba(255,255,255,0.5), transparent); pointer-events:none;"></div>
+      <a href="#contact" class="btn btn-primary">Prenota Ora</a>
+      <a href="#services" class="btn btn-outline">Scopri i Servizi</a>
     </div>
   </div>
 </section>
