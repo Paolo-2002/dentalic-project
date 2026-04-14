@@ -176,6 +176,11 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
   inset: 0;
   background: rgba(13, 43, 43, 0.65);
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+#hero.video-ready::before {
+  opacity: 1;
 }
 .hero-left {
   width: 100%;
@@ -1597,11 +1602,15 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', e=>{
   if(btn){ btn.textContent = 'Subscribed!'; btn.style.background='#059669'; }
 });
 
-/* Hero video fade-in: mostra il video solo quando è pronto, nascondendo il frame verde */
+/* Hero video fade-in: mostra il video e l'overlay solo quando è pronto */
 (function(){
   const heroVid = document.querySelector('.hero-video-bg');
-  if(!heroVid) return;
-  function showVideo() { heroVid.style.opacity = '1'; }
+  const heroEl = document.getElementById('hero');
+  if(!heroVid || !heroEl) return;
+  function showVideo() {
+    heroVid.style.opacity = '1';
+    heroEl.classList.add('video-ready');
+  }
   heroVid.addEventListener('canplay', showVideo, { once: true });
   // Fallback: se il video è già caricato (cache)
   if(heroVid.readyState >= 3) showVideo();
