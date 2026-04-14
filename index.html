@@ -395,7 +395,7 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 .testi-head .pill { margin-bottom: 16px; }
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
@@ -409,7 +409,7 @@ nav.shadow { box-shadow: 0 2px 20px rgba(26,126,126,.08); }
 }
 .testi-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
 .testi-photo {
-  height: 220px;
+  aspect-ratio: 1 / 1;
   background: var(--purple-l);
   display: flex; align-items: flex-end; justify-content: center;
   overflow: hidden;
@@ -624,6 +624,32 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
 .soc svg { width: 16px; height: 16px; fill: currentColor; }
 
 /* ────────────────────────────────────────────────────── */
+/*  SOCIAL SECTION                                        */
+/* ────────────────────────────────────────────────────── */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.social-vid-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateZ(0); /* Hack per far rispettare il border-radius sui video */
+}
+.social-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ────────────────────────────────────────────────────── */
 /*  REVEAL                                                */
 /* ────────────────────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity .65s cubic-bezier(.4,0,.2,1), transform .65s cubic-bezier(.4,0,.2,1); }
@@ -765,6 +791,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
   /* card width set via JS */
   .blog-grid { grid-template-columns: 1fr; }
   .testi-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; gap: 24px; }
   .info-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; }
@@ -1063,6 +1090,30 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ════════════════════════════════════════════
+     SOCIAL
+════════════════════════════════════════════ -->
+<section id="social" class="section">
+  <div class="container">
+    <div class="testi-head reveal">
+      <div class="pill">Social</div>
+      <h2 class="h2" style="margin-top:14px; margin-bottom: 40px">Seguici sui social</h2>
+    </div>
+
+    <div class="social-grid">
+      <div class="social-vid-wrap reveal rd1">
+        <video src="assets/videos/VIDEO SOCIAL 1.mp4" autoplay loop muted playsinline class="social-video"></video>
+      </div>
+      <div class="social-vid-wrap reveal rd2">
+        <video src="assets/videos/VIDEO SOCIAL 2.mp4" autoplay loop muted playsinline class="social-video"></video>
+      </div>
+      <div class="social-vid-wrap reveal rd3">
+        <video src="assets/videos/VIDEO SOCIAL 3.mp4" autoplay loop muted playsinline class="social-video"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
      TESTIMONIALS
 ════════════════════════════════════════════ -->
 <section id="testimonials" class="section">
@@ -1078,31 +1129,41 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
     <div class="testi-grid">
       <div class="testi-card reveal rd1">
         <div class="testi-photo tp-1">
-          <img src="immagini/image 1.jpg" alt="Dott. Marco Piscopo" class="testi-avatar-big" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+          <img src="TEAM/MARCO PISCOPO.png" alt="Dott. Marco Piscopo" class="testi-avatar-big" style="width:100%;height:100%;object-fit:cover;object-position:50% 45%;border-radius:inherit;">
         </div>
         <div class="testi-body">
           <div class="testi-name">Dott. Marco Piscopo</div>
-          <p class="testi-quote">Direttore Sanitario – Medico Chirurgo specializzato in Odontoiatria, Implantologia e Medicina Estetica.</p>
+          <p class="testi-quote">Specializzato in implantologia, chirurgia rigenerativa ed estetica</p>
         </div>
       </div>
 
       <div class="testi-card reveal rd2">
         <div class="testi-photo tp-2">
-          <div class="testi-avatar-big ta-bg2">AG</div>
+          <img src="TEAM/ANNA GUIDA.png" alt="Dott.ssa Anna Guida" class="testi-avatar-big" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;border-radius:inherit;">
         </div>
         <div class="testi-body">
-          <div class="testi-name">Dott.ssa Anna Greco</div>
-          <p class="testi-quote">Odontoiatra specializzata in Ortodonzia e Odontopediatria, con un approccio attento e delicato verso i pazienti più piccoli.</p>
+          <div class="testi-name">Dott.ssa Anna Guida</div>
+          <p class="testi-quote">Igiene e Sbiancamento</p>
         </div>
       </div>
 
       <div class="testi-card reveal rd3">
         <div class="testi-photo tp-3">
-          <div class="testi-avatar-big ta-bg3">LR</div>
+          <img src="TEAM/CIRO CANDALINO.png" alt="Dott. Ciro Candalino" class="testi-avatar-big" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:inherit;">
         </div>
         <div class="testi-body">
-          <div class="testi-name">Dott. Luca Russo</div>
-          <p class="testi-quote">Specialista in Endodonzia e Chirurgia Orale, esperto in trattamenti conservativi e interventi di precisione.</p>
+          <div class="testi-name">Dott. Ciro Candalino</div>
+          <p class="testi-quote">Endodonzia conservativa e protesi</p>
+        </div>
+      </div>
+
+      <div class="testi-card reveal rd4">
+        <div class="testi-photo tp-4">
+          <img src="TEAM/IMMA VIGLIOTTI.png" alt="Imma Vigliotti" class="testi-avatar-big" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;border-radius:inherit;">
+        </div>
+        <div class="testi-body">
+          <div class="testi-name">Imma Vigliotti</div>
+          <p class="testi-quote">Amministrazione e gestione fornitori</p>
         </div>
       </div>
     </div>
